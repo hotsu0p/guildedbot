@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guilded Bot Dashboard</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <h1>Guilded Bot Dashboard</h1>
+    <button onclick="sendMessage()">Send Message</button>
+
+    <script>
+        const socket = io();
+
+        function sendMessage() {
+            socket.emit('send-message', 'Hello from the dashboard!');
+        }
+    </script>
+</body>
+</html>
